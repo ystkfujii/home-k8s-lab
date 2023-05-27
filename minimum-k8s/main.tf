@@ -49,19 +49,4 @@ module "k8s_300" {
   instance_type_wk = local.instance_type_wk
 }
 
-module "k8s_301" {
-  source  = "ystkfujii/minimum-k8s-cluster/nifcloud"
-  version = "0.0.5"
-
-  availability_zone = var.availability_zone
-  prefix            = "301"
-
-  instance_key_name = local.instance_key_name
-
-  instance_count_wk = local.instance_count_wk
-
-  instance_type_cp = local.instance_type_cp
-  instance_type_wk = local.instance_type_wk
-}
-
 
