@@ -21,8 +21,6 @@ resource "nifcloud_security_group_rule" "ssh_from_working_server" {
   security_group_names = [
     module.k8s_300.security_group_name.control_plane,
     module.k8s_300.security_group_name.worker,
-    module.k8s_301.security_group_name.control_plane,
-    module.k8s_301.security_group_name.worker,
   ]
   type      = "IN"
   from_port = 22
